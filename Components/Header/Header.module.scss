@@ -1,0 +1,108 @@
+.background_Header {
+  background: radial-gradient(closest-side, #0A1482 ,#0C102D,#0C102D);
+}
+
+.Header {
+  width: 100%;
+  display: grid;
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  .Header_img {
+    display: block;
+    width: 100%;
+    z-index: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #0C102D;
+}
+}
+.HeaderMenu {
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  display: grid;
+
+  z-index: 2;
+  height: 70px;
+  align-items: center;
+  grid-template-columns: 170px 525px;
+  grid-gap: 525px;
+  .HeaderMenu_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    height: 100%;
+  }
+}
+.HeaderNewsBlock {
+  margin-top: 100px;
+  margin-bottom: 25px;
+  z-index: 7;
+  position: relative;
+  &::after {
+    content: "12";
+    display: flex;
+    width: 100%;
+    color: #fff;
+    height: 50px;
+    background: #0C102D;
+    z-index: 2;
+    position: absolute;
+    bottom: -25px;
+    filter:blur(22px);
+  }
+  .HeaderNewsBlock_textField {
+    display: grid;
+    align-items: center;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    .HeaderNewsBlock_textField__text {
+      //display: flex;
+      //text-align: left;
+      width: 328px;
+      display: block;
+      //justify-items: stretch;
+    }
+    .HeaderNewsBlock_textField__firstLine {
+      grid-column: span 2;
+    }
+    .HeaderNewsBlock_textField__secondLine {
+      display: flex;
+      position: relative;
+      grid-column: span 2;
+      &:after {
+        bottom: -70px;
+        right: 50px;
+        position: absolute;
+        font-family: 'Clash Display',sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        content:"Courses"
+      }
+    }
+    .HeaderNewsBlock_textField__button {
+      width: 288px;
+      height: 72px;
+    }
+  }
+  .HeaderNewsBlock__EllipseTwo {
+    position: absolute;
+    bottom: -120px;
+    z-index: 3;
+    right: -30px;
+  }
+  .HeaderNewsBlock__EllipseOne {
+    position: absolute;
+    bottom: -150px;
+    left: 150px;
+    z-index: 3;
+  }
+}

@@ -1,0 +1,732 @@
+@import "../styles/SCSSVariables.module.scss";
+//ABOUT COMPONENT
+
+.About {
+  position: relative;
+  height: 600px;
+  width: 1280px;
+  margin: 120px auto 0;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  text-align: center;
+
+  h2 {
+    display: flex;
+    width: 100%;
+    justify-self: center;
+    justify-content: center;
+  }
+
+  .About_block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    p {
+      display: flex;
+      align-items: center;
+      width: 500px;
+      text-align: left;
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+.Mentors {
+  position: relative;
+}
+
+.SideMentor {
+  margin-top: 50px;
+}
+
+.MentorLineImg {
+  position: absolute;
+  margin-top: 15px;
+  left: 120px;
+}
+
+.Mentors_block {
+  position: relative;
+  display: grid;
+  margin-top: 120px;
+  margin-left: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.AboutPictureItem {
+  display: block;
+  width: 188px;
+
+  h4 {
+    text-align: left;
+    margin-top: 15px;
+  }
+
+  p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .AboutPictureItem__img {
+    width: 188px;
+    height: 188px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+
+    .AboutPictureItem__picture {
+      display: block;
+      position: relative;
+      z-index: 5;
+    }
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #fff;
+      content: "";
+      width: 188px;
+      height: 188px;
+      display: flex;
+      background: linear-gradient(rgba(21, 191, 253, 0),
+              rgba(21, 191, 253, 0.7),
+              rgba(156, 55, 253, 0.7));
+      border-radius: 50%;
+    }
+  }
+
+  p {
+    max-width: 184px;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.65);
+    width: 184px;
+  }
+}
+
+////************ ABOUT COMPONENT DONE **************
+
+// TECHNOLOGIES COMPONENT
+
+.Technologies {
+  position: relative;
+  width: 1280px;
+  margin: 180px auto 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  padding-bottom: 150px;
+
+  .Technologies_name {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    width: 432px;
+    height: 232px;
+  }
+}
+
+.TechnologiesItem_background {
+  display: flex;
+  width: 183px;
+  position: relative;
+  height: 232px;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(315deg, transparent 10%, rgba(21, 191, 253, 0.7) 10%,
+          rgba(156, 55, 253, 0.7));
+  z-index: 1;
+  border-radius: 16px 16px 0 16px;
+}
+
+.TechnologiesItem {
+  position: relative;
+  width: 181px;
+  height: 230px;
+  display: flex;
+  z-index: 2;
+  background: linear-gradient(315deg, transparent 10%, #0C102D 10%);
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  h4,img{
+    position: relative;
+    z-index: 100;
+  }
+
+}
+
+.TechnologiesGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+
+//// ********TECHNOLOGIES COMPONENT DONE*************
+
+// STEPS COMPONENT
+
+.Steps {
+  width: 1280px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  position: relative;
+  h2 {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+.Steps_block {
+  position: relative;
+  display: grid;
+  margin-top: 56px;
+
+  gap: 16px;
+
+  .Steps_block__vertical_line {
+    position: absolute;
+    left: 50%;
+    top: 135px;
+  }
+
+  .Steps_block__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 185px);
+    grid-row-gap: 5px;
+  }
+}
+
+//BACKGROUND STEPS ITEMS
+.StepsGradient {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 496px;
+
+  height: 228px;
+  border-radius: 16px;
+  background: linear-gradient(90deg, rgba(21, 191, 253, 0) 300px,
+          rgba(21, 191, 253, 0.7) 400px,
+          rgba(156, 55, 253, 0.7) 480px);
+  &::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px; left: 10px;
+  right: 10px; bottom: 10px;
+  border-radius: 16px;
+  background: linear-gradient( 90deg,transparent , $defaultColor);
+}
+}
+
+//****************
+
+.StepsItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 475px;
+  grid-row: span 2;
+  height: 191px;
+  z-index: 4;
+  padding: 24px;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: linear-gradient(180deg,
+          rgba(21, 191, 253, 0.7),
+          rgba(156, 55, 253, 0.7)) border-box;
+
+  gap: 16px;
+  align-items: flex-start;
+  p{
+    color:#A2CBFB;
+  }
+  &::before {
+    position: absolute;
+    display: flex;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    background: #0C102D;
+    content: "";
+    z-index: -2;
+    border-radius: 8px;
+
+  }
+
+  .StepsItem__arrowLine {
+    position: absolute;
+    right: -180px;
+    rotate: 180deg;
+    top: 50%;
+  }
+}
+
+//*********SECOND LINE
+.oneStep {
+  grid-row: span 2;
+}
+
+.oneStepSecondLine {
+  grid-row: span 2;
+  top: 124px;
+}
+
+.StepsSecondLine {
+  left: 150px;
+
+  .StepsItem__arrowLine {
+    rotate: 0deg;
+    left: -180px;
+  }
+}
+
+.StepsGradientSecondLine {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 494px;
+  height: 228px;
+  border-radius: 16px;
+  background: linear-gradient(270deg, rgba(21, 191, 253, 0) 300px,
+          rgba(21, 191, 253, 0.7) 400px,
+          rgba(156, 55, 253, 0.7) 480px);
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10px; left: 10px;
+    right: 10px; bottom: 10px;
+    border-radius: 16px;
+    background: linear-gradient( 90deg, $defaultColor,transparent);
+  }
+}
+
+//SECOND LINE***************
+
+//// ************** STEPS COMPONENT DONE **********************
+
+// *********FAQ COMPONENT
+
+.FAQ {
+  position: relative;
+  width: 1280px;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+  margin: 180px auto;
+
+  h2 {
+
+  }
+
+  .FAQ_block {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .FAQ_questionMark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .FAQ_questionMark__text {
+      width: 260px;
+      margin-left: 56px;
+      align-self: flex-start;
+    }
+
+    .FAQ_questionMark__img {
+      margin-top: 56px;
+    }
+  }
+}
+
+// **********FAQ BLOCK ITEM
+
+
+
+.FaqBlockItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  overflow: hidden;
+  padding: 16px 20px;
+  transition: max-height 0.5s ease-in-out;
+  width: 703px;
+  z-index: 1;
+  min-height: 62px;
+  max-height: 62px;
+  border: 1px solid transparent;
+  background: #0C102D;
+  border-radius: 8px;
+  background: linear-gradient(135deg,
+          transparent 2.7%,
+          rgba(21, 191, 253, 0.7) 2.7%,
+          rgba(156, 55, 253, 0.7) 97%,
+          transparent 97.45%) border-box;
+
+  &::before {
+    position: absolute;
+    display: flex;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    background: linear-gradient(315deg, transparent 2.6%, #0C102D 2.6%, #0C102D 97.45%, transparent 96%);
+    content: "";
+    z-index: -1;
+    border-radius: 8px;
+  }
+
+  .FaqBlockItem__button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border-radius: 16px;
+    text-decoration: none;
+    background: #0C102D;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.FAQ_blockItems {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.FaqOpenBlock {
+  max-height: 500px;
+
+  transition: max-height 0.5s ease-in-out;
+
+}
+// FAQ BLOCK ITEM *******************
+
+////************* FAQ BLOCK COMPONENT DONE *********************
+
+//************ REVIEW COMPONENT *******************
+
+@keyframes BlockFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.Review {
+  display: grid;
+  align-items: center;
+  width: 1280px;
+  position: relative;
+
+
+  margin: 0 auto;
+  justify-content: center;
+  padding-bottom: 200px;
+  grid-gap: 23px;
+
+  .Review__name {
+    grid-column: span 2;
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+.ArrowBlock {
+  display: flex;
+  gap: 24px;
+}
+
+.ReviewSwipe {
+  height: auto;
+  position: relative;
+  background: transparent;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+
+  .ReviewSwipe_block {
+    position: relative;
+    background: transparent;
+    .ReviewSwipe_block__ArrowBlock {
+      display: flex;
+      grid-row: 1;
+      align-items: center;
+      padding:12px;
+      justify-content: space-between;
+      width: 100%;
+      p{
+        position: relative;
+        color: white;
+        font-family: 'Clash Display',sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        span {
+          position: absolute;
+          top: -6px;
+          left: 28px;
+          font-family: 'Clash Display',sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 120%;
+        }
+      }
+    }
+    .ReviewSwipe_block__PictureBlock {
+      grid-row: 2;
+      display: flex;
+      width: 800px;
+      height: 422px;
+      gap: 24px;
+      padding: 0 12px;
+    }
+    .TechnologiesItem_background {
+      position: absolute;
+      right: 0;
+      animation: BlockFade 1s ease-in-out;
+      transition: transform 1s ease-in-out;
+      background: linear-gradient(315deg, rgba(21, 191, 253, 0.7),
+              rgba(156, 55, 253, 0.7));
+      z-index: 6;
+      padding: 2px;
+    }
+
+    .TechnologiesItem {
+      overflow: hidden;
+      border-radius: 16px;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      background: $defaultColor;
+      justify-content: center;
+
+    }
+  }
+  .ReviewSwipe__main {
+    z-index: 1250;
+    position: relative;
+    //animation: fadeText 1s ease-in-out;
+  }
+
+  .ReviewSwipe_text {
+    display: flex;
+    width: 100%;
+    padding: 24px;
+    align-self: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    animation: BlockFade 1s ease-in-out;
+    transition: opacity 1s;
+  }
+}
+//// *****************REVIEW COMPONENT DONE **********************
+
+// ******************* GALLERY COMPONENT *******************
+.Gallery {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 1280px;
+  margin: 0 auto 120px;
+  justify-content: center;
+  align-items: center;
+  .Gallery_block {
+    display: grid;
+    margin-top: 56px;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(3,1fr);
+    img {
+      position: relative;
+      z-index: 6;
+    }
+    .Gallery_block__picture1 {
+      padding: 6px;
+      grid-row: span 2;
+    }
+    .Gallery_block__picture2 {
+      padding: 6px;
+      grid-column: 3;
+      grid-row: 1;
+    }
+    .Gallery_block__picture3 {
+      padding: 6px;
+      grid-column: 3;
+    }
+    .Gallery_block__picture4 {
+      padding: 6px;
+      grid-row: span 2;
+      grid-column: 1;
+    }
+    .Gallery_block__text1 {
+      padding: 6px;
+      width: 90%;
+      align-self: center;
+    }
+    .Gallery_block__text2 {
+      padding: 6px;
+      grid-column: span 2;
+      width: 85%;
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+}
+////******************* GALLERY COMPONENT DONE *********************
+
+//**********************CONTACT US COMPONENT ************************
+
+.ContactUs__background {
+  position: relative;
+  width: 1280px;
+  height: 600px;
+  margin: 200px auto;
+  display: flex;
+  z-index: 4;
+  padding: 2px;
+  overflow: hidden;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  @include linearGradientPurpleBlue(135deg,0.4,0.3)
+}
+.ContactUs {
+  border-radius: 8px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: $defaultColor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2%;
+  justify-content: center;
+  .ContactUs__TextField {
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+  }
+  .ContactUs__button {
+    width: 493px;
+
+  }
+}
+
+
+////***************************CONTACT US COMPONENT DONE ***********************
+
+
+//*********************** FOOTER COMPONENT *************************
+
+
+.Footer__background {
+  width: 100%;
+  content: "";
+  height: 195px;
+  padding-top: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $defaultColor;
+  border-top: 1px solid;
+  border-image-slice: 1;
+  border-image-source: $linearGradientPurpleBlue;
+  .Footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 24px;
+    justify-self: center;
+    width: 1280px;
+    .Footer_LogoBlock {
+      align-self: start;
+      p {
+        margin-top: 15px;
+        width: 231px;
+      }
+    }
+    .Footer_LinkBlock {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .Footer_LinkBlock__name {
+        align-self: start;
+        font-family: 'Roboto',sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+      }
+      .Footer_LinkBlock__list {
+        display: grid;
+        height: 128px;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        li {
+          margin-top: 16px;
+        }
+      }
+    }
+    .Footer_SocialMedia {
+      display: flex;
+      flex-direction: column;
+      align-self: start;
+      gap: 24px;
+    }
+    .Footer_SocialMedia__name {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      font-family: 'Roboto',sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21px;
+    }
+    .Footer_SocialMedia__list {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+  }
+}
+
+
+

@@ -1,0 +1,14 @@
+$linearGradient: linear-gradient(90deg,#0C102D,#0A1482,#0C102D);
+
+//$linearGradientPurpleBlue: linear-gradient( rgba(21, 191, 253, 0.7),
+//        rgba(156, 55, 253, 0.7));
+
+$defaultColor: #0C102D;
+
+$linearGradientPurpleBlue: linear-gradient(315deg, rgba(21, 191, 253, 0.7),
+        rgba(156, 55, 253, 0.7));
+
+@mixin linearGradientPurpleBlue($deg: 0,$blue: 0.7,$purple:0.7) {
+  background : linear-gradient($deg, rgba(21, 191, 253, $blue),
+rgba(156, 55, 253, $purple))
+}
